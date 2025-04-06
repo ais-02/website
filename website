@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aiswarya's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #3D0301;
+      color: #F8F4E1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    header .name {
+      font-size: 26px;
+      font-weight: bold;
+      color: #FEBA17;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #F8F4E1;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FEBA17;
+    }
+
+    section {
+      padding: 120px 50px 60px;
+      scroll-margin-top: 100px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #FEBA17;
+      border-bottom: 2px solid #74512D;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+
+    .scroll-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      overflow-x: auto;
+    }
+
+    .scroll-box {
+      min-width: 300px;
+      background-color: #4E1F00;
+      padding: 20px;
+      border-radius: 15px;
+      flex: 0 0 auto;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-box:hover {
+      background-color: #FEBA17;
+      color: #3D0301;
+    }
+
+    .scroll-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .scroll-nav button {
+      background: #74512D;
+      border: none;
+      color: #F8F4E1;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      background-color: #74512D;
+      padding: 30px;
+      border-radius: 20px;
+      color: white;
+      width: 400px;
+      z-index: 10000;
+    }
+
+    .popup.active {
+      display: block;
+    }
+
+    .popup-close {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FEBA17;
+      color: #210F37;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #FEBA17;
+    }
+
+    ::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #74512D;
+      border-radius: 10px;
+    }
+
+    #contact {
+      background: linear-gradient(to bottom, #4E1F00, #3D0301);
+    }
+
+    #contact .heading {
+      font-size: 36px;
+      color: #FEBA17;
+    }
+
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 5px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #210F37;
+      color: #F8F4E1;
+    }
+
+    #contact .send {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #FEBA17;
+      color: #3D0301;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact .imgBG {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#intro">Introduction</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="name">Aiswarya Anilkumar</div>
+  </header>
+
+  <section id="intro" class="panel">
+   <section id="intro" class="panel" style="max-width: 1000px; margin: 5 auto; scroll-margin-top: 120px;">
+
+    <h2>Introduction</h2>
+    <p style="font-size: 18px; line-height: 1.6;">
+      Hello! I'm <strong>Aiswarya</strong>, a Master's student in Statistics with a specialization in Data Science. I’m passionate about turning data into insights through statistical analysis, machine learning, and data visualization. With a solid foundation in mathematics and a growing skill set in tools like Python, R, SQL, and Power BI, I enjoy exploring data-driven solutions to real-world problems. I'm currently looking for opportunities to apply my skills in practical settings, collaborate on exciting projects, and continue learning in the field of analytics and data science.
+    </p>
+  </section>
+
+  <section id="skills" class="panel">
+    <h2>Skills</h2>
+    <div class="scroll-section" id="skills-scroll">
+      <div class="scroll-box" onclick="showPopup('HTML - Used to structure content on the web.')">HTML</div>
+      <div class="scroll-box" onclick="showPopup('CSS - For beautiful styling and layout.')">CSS</div>
+      <div class="scroll-box" onclick="showPopup('JavaScript - Makes websites interactive.')">JavaScript</div>
+    </div>
+    <div class="scroll-nav">
+      <button onclick="scrollLeft('skills-scroll')">&larr;</button>
+      <button onclick="scrollRight('skills-scroll')">&rarr;</button>
+    </div>
+  </section>
+
+  <section id="projects" class="panel">
+    <h2>Projects</h2>
+    <div class="scroll-section" id="projects-scroll">
+      <div class="scroll-box" onclick="showPopup('This is a portfolio website built using HTML, CSS, and JavaScript.')">Portfolio Website</div>
+      <div class="scroll-box" onclick="showPopup('Power BI dashboard to visualize sales performance and KPIs.')">Power BI Dashboard</div>
+      <div class="scroll-box" onclick="showPopup('Mini project analyzing trends in open data using Python.')">Python Data Analysis</div>
+    </div>
+    <div class="scroll-nav">
+      <button onclick="scrollLeft('projects-scroll')">&larr;</button>
+      <button onclick="scrollRight('projects-scroll')">&rarr;</button>
+    </div>
+  </section>
+
+  <section id="services" class="panel">
+    <h2>Services</h2>
+    <div class="scroll-section" id="services-scroll">
+      <div class="scroll-box" onclick="showPopup('I offer responsive website design and layout.')">Web Design</div>
+      <div class="scroll-box" onclick="showPopup('I build insightful dashboards using Power BI.')">Power BI Solutions</div>
+      <div class="scroll-box" onclick="showPopup('Data analysis using Python, R, and Excel.')">Data Analysis</div>
+    </div>
+    <div class="scroll-nav">
+      <button onclick="scrollLeft('services-scroll')">&larr;</button>
+      <button onclick="scrollRight('services-scroll')">&rarr;</button>
+    </div>
+  </section>
+
+  <section id="blog" class="panel">
+    <h2>Blog</h2>
+    <div class="scroll-section" id="blog-scroll">
+      <div class="scroll-box" onclick="showPopup('Beginner-friendly HTML & CSS guide.')">
+        <h3 style="color: #FEBA17;">Getting Started with HTML & CSS</h3>
+        <p>Kickstart your web dev journey with this guide.</p>
+      </div>
+      <div class="scroll-box" onclick="showPopup('Boost productivity using these VS Code extensions.')">
+        <h3 style="color: #FEBA17;">Top 5 VS Code Extensions</h3>
+        <p>Boost your workflow instantly.</p>
+      </div>
+      <div class="scroll-box" onclick="showPopup('Simple CSS tricks for stunning UIs.')">
+        <h3 style="color: #FEBA17;">CSS Tips for Better Design</h3>
+        <p>Clean, crisp designs with small changes.</p>
+      </div>
+    </div>
+    <div class="scroll-nav">
+      <button onclick="scrollLeft('blog-scroll')">&larr;</button>
+      <button onclick="scrollRight('blog-scroll')">&rarr;</button>
+    </div>
+  </section>
+
+  <section id="contact" class="panel">
+
+    <div class="heading">Get in <span style="color: #F8F4E1;">touch</span></div>
+    <p style="margin: 10px 0 30px; color: #F8F4E1;">
+      Have a question or want to work together? Fill out the form below.
+    </p>
+    <form>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Phone Number">
+      <textarea rows="4" placeholder="Message"></textarea>
+      <a href="#" class="send">Send</a>
+    </form>
+  </section>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <p id="popup-content">Popup Content</p>
+  </div>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+  <script>
+    function scrollLeft(id) {
+      document.getElementById(id).scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight(id) {
+      document.getElementById(id).scrollBy({ left: 300, behavior: 'smooth' });
+    }
+
+    function showPopup(content) {
+      document.getElementById('popup-content').textContent = content;
+      document.getElementById('popup').classList.add('active');
+    }
+
+    function closePopup() {
+      document.getElementById('popup').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
